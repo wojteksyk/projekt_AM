@@ -26,9 +26,9 @@
         android:hint="Wpisz numer zamówienia..."
         android:textColor="#FFFFFF"
         android:textColorHint="#AAAAAA"
-    android:padding="12dp"
-    android:inputType="number"
-    android:imeOptions="actionSearch"/>
+        android:padding="12dp"
+        android:inputType="number"
+        android:imeOptions="actionSearch"/>
 
 
     <Button
@@ -60,12 +60,12 @@
 
             <TextView
                 android:id="@+id/orderNumberText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Zamówienie #12345"
-            android:textColor="#FFA726"
-            android:textSize="18sp"
-            android:textStyle="bold"/>
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Zamówienie #12345"
+                android:textColor="#FFA726"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
 
 
             <TextView
@@ -87,7 +87,19 @@
                 android:text="Szczegóły"
                 android:textColor="#FFA726"
                 android:textAllCaps="false"/>
-
         </LinearLayout>
     </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/contactUsButton"
+        android:layout_width="165dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="250dp"
+        android:backgroundTint="#39424E"
+        android:text="Kontakt"
+        android:textSize="20sp"
+        android:textColor="#FFA726"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/orderActionButton" />
 </LinearLayout>

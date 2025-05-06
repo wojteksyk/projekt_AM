@@ -21,7 +21,7 @@
         android:textStyle= "bold"/>
 
     <Button
-        android:id="@+id/enterAppButton"
+        android:id="@+id/enter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="150dp"

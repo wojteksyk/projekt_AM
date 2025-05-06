@@ -15,7 +15,7 @@ public class SplashScreenActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
 
-        enterAppButton = findViewById(R.id.enterAppButton);
+        enterAppButton = findViewById(R.id.enter);
         enterAppButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
