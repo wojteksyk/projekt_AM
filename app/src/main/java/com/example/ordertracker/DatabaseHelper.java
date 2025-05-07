@@ -8,7 +8,7 @@ import android.database.Cursor;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "orders.db";
-    private static final int DATABASE_VERSION = 4;
+    private static final int DATABASE_VERSION = 5;
 
     public static final String TABLE_ORDERS = "orders";
     public static final String COLUMN_ORDER_NUMBER = "orderNumber";
@@ -29,11 +29,31 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(createTable);
 
 
-        addSampleOrder(db, "123", "w drodze", "Zamówienie zostało nadane i oczekuje na kuriera.");
-        addSampleOrder(db, "123456", "Dostarczone", "Zamówienie zostało dostarczone do odbiorcy.");
-        addSampleOrder(db, "11223", "W drodze", "Zamówienie jest w trakcie transportu.");
-        addSampleOrder(db, "44556", "Oczekujące", "Zamówienie oczekuje na przetworzenie.");
-        addSampleOrder(db, "2137", "w drodze", "Papież Polak samodzielnie dostarczy zamówienie.");
+        addSampleOrder(db, "1", "Dostarczone", "Zamówienie zostało dostarczone do odbiorcy.");
+        addSampleOrder(db, "2", "Oczekujące", "Zamówienie oczekuje na przetworzenie.");
+        addSampleOrder(db, "3", "W drodze", "Zamówienie jest w trakcie transportu.");
+        addSampleOrder(db, "4", "Dostarczone", "Zamówienie zostało dostarczone do odbiorcy.");
+        addSampleOrder(db, "5", "Oczekujące", "Zamówienie oczekuje na przetworzenie.");
+        addSampleOrder(db, "6", "W drodze", "Zamówienie jest w trakcie transportu.");
+        addSampleOrder(db, "7", "Dostarczone", "Zamówienie zostało dostarczone do odbiorcy.");
+        addSampleOrder(db, "8", "Oczekujące", "Zamówienie oczekuje na przetworzenie.");
+        addSampleOrder(db, "9", "W drodze", "Zamówienie jest w trakcie transportu.");
+        addSampleOrder(db, "10", "Dostarczone", "Zamówienie zostało dostarczone do odbiorcy.");
+        addSampleOrder(db, "11", "Oczekujące", "Zamówienie oczekuje na przetworzenie.");
+        addSampleOrder(db, "12", "W drodze", "Zamówienie jest w trakcie transportu.");
+        addSampleOrder(db, "13", "Dostarczone", "Zamówienie zostało dostarczone do odbiorcy.");
+        addSampleOrder(db, "14", "Oczekujące", "Zamówienie oczekuje na przetworzenie.");
+        addSampleOrder(db, "15", "W drodze", "Zamówienie jest w trakcie transportu.");
+        addSampleOrder(db, "16", "Dostarczone", "Zamówienie zostało dostarczone do odbiorcy.");
+        addSampleOrder(db, "17", "Oczekujące", "Zamówienie oczekuje na przetworzenie.");
+        addSampleOrder(db, "18", "W drodze", "Zamówienie jest w trakcie transportu.");
+        addSampleOrder(db, "19", "Dostarczone", "Zamówienie zostało dostarczone do odbiorcy.");
+        addSampleOrder(db, "20", "Oczekujące", "Zamówienie oczekuje na przetworzenie.");
+        addSampleOrder(db, "21", "W drodze", "Zamówienie jest w trakcie transportu.");
+        addSampleOrder(db, "22", "Dostarczone", "Zamówienie zostało dostarczone do odbiorcy.");
+        addSampleOrder(db, "23", "Oczekujące", "Zamówienie oczekuje na przetworzenie.");
+        addSampleOrder(db, "24", "W drodze", "Zamówienie jest w trakcie transportu.");
+
     }
 
     @Override
