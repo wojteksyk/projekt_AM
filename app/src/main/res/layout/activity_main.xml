@@ -14,7 +14,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="24dp"
         android:text="OrderTracker"
-        android:textColor="#FFFFFF"
+        android:textColor="#FFA726"
         android:textSize="28sp"
         android:textStyle="bold" />
 
@@ -26,6 +26,7 @@
         android:hint="Wpisz numer zamówienia..."
         android:textColor="#FFFFFF"
         android:textColorHint="#AAAAAA"
+        android:textStyle= "italic"
         android:padding="12dp"
         android:inputType="number"
         android:imeOptions="actionSearch"/>
@@ -39,6 +40,7 @@
         android:backgroundTint="#FFA726"
         android:text="Śledź zamówienie"
         android:textColor="#000000"
+        android:textStyle= "bold"
         android:textAllCaps="false"/>
 
 
@@ -74,6 +76,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="W drodze"
+                android:textStyle= "italic"
                 android:textColor="#4CAF50"
                 android:textSize="16sp"/>
 
@@ -85,6 +88,7 @@
                 android:layout_marginTop="16dp"
                 android:backgroundTint="#39424E"
                 android:text="Szczegóły"
+                android:textStyle= "bold"
                 android:textColor="#FFA726"
                 android:textAllCaps="false"/>
         </LinearLayout>
@@ -95,10 +99,10 @@
         android:layout_width="165dp"
         android:layout_height="80dp"
         android:layout_marginTop="250dp"
-        android:backgroundTint="#39424E"
+        android:backgroundTint="#FFA726"
         android:text="Kontakt"
         android:textSize="20sp"
-        android:textColor="#FFA726"
+        android:textColor="#39424E"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/orderActionButton" />

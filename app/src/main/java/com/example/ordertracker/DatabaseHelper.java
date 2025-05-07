@@ -8,7 +8,7 @@ import android.database.Cursor;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "orders.db";
-    private static final int DATABASE_VERSION = 3;
+    private static final int DATABASE_VERSION = 4;
 
     public static final String TABLE_ORDERS = "orders";
     public static final String COLUMN_ORDER_NUMBER = "orderNumber";
@@ -33,6 +33,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         addSampleOrder(db, "123456", "Dostarczone", "Zamówienie zostało dostarczone do odbiorcy.");
         addSampleOrder(db, "11223", "W drodze", "Zamówienie jest w trakcie transportu.");
         addSampleOrder(db, "44556", "Oczekujące", "Zamówienie oczekuje na przetworzenie.");
+        addSampleOrder(db, "2137", "w drodze", "Papież Polak samodzielnie dostarczy zamówienie.");
     }
 
     @Override

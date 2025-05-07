@@ -16,15 +16,17 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="OrderTracker"
-        android:textColor= "@color/white"
+        android:textColor= "#FFA726"
         android:textSize="30dp"
-        android:textStyle= "bold"/>
+        android:textStyle= "bold"
+        />
 
     <Button
         android:id="@+id/enter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="150dp"
+        android:textStyle="bold"
         android:backgroundTint="#FFA726"
         android:text="Wejdź do aplikacji"
         android:textAllCaps="false"

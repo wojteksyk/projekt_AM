@@ -1,84 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:background="#0A0F1A"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:padding="20dp"
+    <ScrollView
+        android:id="@+id/scrollContent"
+        android:layout_above="@+id/backToMainButton"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
-        <TextView
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="20dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Szczegóły zamówienia"
-            android:textColor="#FFFFFF"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:layout_marginBottom="24dp" />
+            android:layout_height="wrap_content">
 
-
-
-            <LinearLayout
-                android:orientation="vertical"
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:text="Szczegóły zamówienia"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginBottom="24dp" />
 
-                <TextView
-                    android:id="@+id/detailOrderNumber"
-                    android:textColor="#FFA726"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:layout_marginBottom="12dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/detailOrderNumber"
+                android:textColor="#FFA726"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
-                <TextView
-                    android:id="@+id/detailOrderStatus"
-                    android:textColor="#4CAF50"
-                    android:textSize="18sp"
-                    android:layout_marginBottom="8dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/detailOrderStatus"
+                android:textColor="#4CAF50"
+                android:textSize="18sp"
+                android:layout_marginBottom="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
-                <TextView
-                    android:id="@+id/detailOrderInfo"
-                    android:textColor="#FFFFFF"
-                    android:textSize="16sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/detailOrderInfo"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
+            <ImageView
+                android:id="@+id/qrImageView"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp" />
 
-                <ImageView
-                    android:id="@+id/qrImageView"
-                    android:layout_width="200dp"
-                    android:layout_height="200dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="16dp" />
-            </LinearLayout>
+            <Button
+                android:id="@+id/howItWorksButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#29B6F6"
+                android:text="Jak działa nasz kod QR?"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textAllCaps="false" />
+        </LinearLayout>
+    </ScrollView>
 
-
-
-
-
-
-
-        <Button
-            android:id="@+id/backToMainButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:backgroundTint="#FFA726"
-            android:text="Powrót do głównej"
-            android:textColor="#000000"
-            android:textAllCaps="false"
-            android:padding="12dp"
-            android:elevation="4dp"
-            android:layout_gravity="center_horizontal" />
-
-    </LinearLayout>
-
-</ScrollView>
+    <Button
+        android:id="@+id/backToMainButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:backgroundTint="#FFA726"
+        android:elevation="4dp"
+        android:textStyle="bold"
+        android:padding="12dp"
+        android:text="Powrót"
+        android:textAllCaps="false"
+        android:textColor="#000000" />
+</RelativeLayout>

@@ -1,10 +1,12 @@
 package com.example.ordertracker;
 
+import android.content.Intent;
+import android.util.Log;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.squareup.picasso.Picasso;
@@ -26,21 +28,34 @@ public class OrderDetailsActivity extends AppCompatActivity {
         backButton = findViewById(R.id.backToMainButton);
         qrImageView = findViewById(R.id.qrImageView);
 
-        String number = getIntent().getStringExtra("orderNumber");
-        String status = getIntent().getStringExtra("orderStatus");
-        String details = getIntent().getStringExtra("orderDetails");
 
-        if (number != null && status != null && details != null) {
-            detailOrderNumber.setText("Zamówienie #" + number);
-            detailOrderStatus.setText(status);
-            detailOrderInfo.setText(details);
+        String orderNumber = getIntent().getStringExtra("orderNumber");
+        String orderStatus = getIntent().getStringExtra("orderStatus");
+        String orderDetails = getIntent().getStringExtra("orderDetails");
 
-          //
-           //  String qrData = "Kod odbioru: " + number;
-          //  String qrUrl = "https://api.qrserver.com/v1/create-qr-code/?data=" + qrData + "&size=200x200";
-           // Picasso.get().load(qrUrl).into(qrImageView);
-//
-     backButton.setOnClickListener(v -> finish());
+
+        detailOrderNumber.setText("Zamówienie #" + orderNumber);
+        detailOrderStatus.setText("Status: " + orderStatus);
+        detailOrderInfo.setText(orderDetails);
+
+        if ("2137".equals(orderNumber)){
+            String qrUrl = "https://api.qrserver.com/v1/create-qr-code/?data=https://www.youtube.com/watch?v=xvFZjo5PgG0&size=200x200";
+            Log.d("QR_DEBUG", "QR URL: " + qrUrl);
+            Picasso.get().load(qrUrl).into(qrImageView);
+        }
+        else {
+            String qrUrl = "https://api.qrserver.com/v1/create-qr-code/?data=" + orderNumber + "&size=200x200";
+            Log.d("QR_DEBUG", "QR URL: " + qrUrl);
+            Picasso.get().load(qrUrl).into(qrImageView);
+        }
+        Button howItWorksButton = findViewById(R.id.howItWorksButton);
+        howItWorksButton.setOnClickListener(v -> {
+            Intent intent = new Intent(OrderDetailsActivity.this, qrExplanation.class);
+            startActivity(intent);
+        });
+
+
+
+        backButton.setOnClickListener(v -> finish());
     }
-}
 }
