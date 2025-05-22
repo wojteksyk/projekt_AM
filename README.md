@@ -1,3 +1,4 @@
+lepiej otworzyc to w notatniku jak pobierze pan projekt 
 Dokumentacja:
 1. Opis aplikacji:
 Aplikacja OrderTracker jest stworzona przy użyciu javy. Aplikacja umożliwia użytkownikowi na sprawdzanie statusu swoich zamówień. 
