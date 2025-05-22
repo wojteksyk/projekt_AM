@@ -50,7 +50,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
-            <!-- QR ImageView - will be replaced with RatingBar -->
             <ImageView
                 android:id="@+id/qrImageView"
                 android:layout_width="200dp"
@@ -59,7 +58,6 @@
                 android:layout_marginTop="16dp"
                 android:visibility="gone" />
 
-            <!-- RatingBar for 'Delivered' orders -->
             <TextView
                 android:id="@+id/ratingLabel"
                 android:layout_width="wrap_content"
@@ -83,9 +81,8 @@
                 android:visibility="gone"
                 android:theme="@style/Widget.AppCompat.RatingBar" />
 
-            <!-- Submit Rating Button -->
             <Button
-                android:id="@+id/submitRatingButton"
+                android:id="@+id/RaitingBar1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -94,7 +91,6 @@
                 android:backgroundTint="#4CAF50"
                 android:textColor="#FFFFFF"/>
 
-            <!-- How it works Button for QR code explanation -->
             <Button
                 android:id="@+id/howItWorksButton"
                 android:layout_width="match_parent"

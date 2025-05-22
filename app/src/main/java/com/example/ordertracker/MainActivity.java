@@ -16,12 +16,10 @@ import androidx.cardview.widget.CardView;
 public class MainActivity extends AppCompatActivity {
     private DatabaseHelper dbHelper;
     private EditText searchInput;
-
     private ImageView qrImageView;
-
     private CardView orderCard;
     private TextView orderNumberText, orderStatusText;
-    private Button orderActionButton;
+    private Button detailsBtn;
     private String currentOrderNumber = "";
     private String currentOrderStatus = "";
     private String currentOrderDetails = "";
@@ -36,9 +34,9 @@ public class MainActivity extends AppCompatActivity {
         searchInput = findViewById(R.id.searchOrderInput);
         Button searchButton = findViewById(R.id.searchButton);
         orderCard = findViewById(R.id.orderCard);
-        orderNumberText = findViewById(R.id.orderNumberText);
+        orderNumberText = findViewById(R.id.orderNumber);
         orderStatusText = findViewById(R.id.orderStatus);
-        orderActionButton = findViewById(R.id.orderActionButton);
+        detailsBtn = findViewById(R.id.detailsBtn);
         Button contactButton = findViewById(R.id.contactUsButton);
 
 
@@ -49,11 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         searchButton.setOnClickListener(v -> searchOrder());
-
-
-        orderActionButton.setOnClickListener(v -> showOrderDetails());
-
-
+        detailsBtn.setOnClickListener(v -> showOrderDetails());
         contactButton.setOnClickListener(v -> startActivity(new Intent(this, ContactActivity.class)));
     }
 

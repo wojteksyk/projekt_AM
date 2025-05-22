@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class ContactActivity extends AppCompatActivity {
 
     private EditText contactName, contactEmail, contactMessage;
-    private Button sendButton, backToMainButton;
+    private Button sendButton, goBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,16 +22,14 @@ public class ContactActivity extends AppCompatActivity {
         contactEmail = findViewById(R.id.contactEmail);
         contactMessage = findViewById(R.id.contactMessage);
         sendButton = findViewById(R.id.sendButton);
-        backToMainButton = findViewById(R.id.backToMainButton);
+        goBack = findViewById(R.id.backToMainButton);
 
 
-        sendButton.setOnClickListener(v -> sendMessage());
-
-
-        backToMainButton.setOnClickListener(v -> goBackToMain());
+        sendButton.setOnClickListener(v -> sendMsg());
+        goBack.setOnClickListener(v -> backMain());
     }
 
-    private void sendMessage() {
+    private void sendMsg() {
 
         String name = contactName.getText().toString().trim();
         String email = contactEmail.getText().toString().trim();
@@ -58,7 +56,7 @@ public class ContactActivity extends AppCompatActivity {
         contactEmail.setText("");
         contactMessage.setText("");
     }
-    private void goBackToMain() {
+    private void backMain() {
         Intent intent = new Intent(ContactActivity.this, MainActivity.class);
         startActivity(intent);
         finish();

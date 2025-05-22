@@ -61,7 +61,7 @@
 
 
             <TextView
-                android:id="@+id/orderNumberText"
+                android:id="@+id/orderNumber"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Zamówienie #12345"
@@ -82,7 +82,7 @@
 
 
             <Button
-                android:id="@+id/orderActionButton"
+                android:id="@+id/detailsBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -105,5 +105,5 @@
         android:textColor="#39424E"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/orderActionButton" />
+        app:layout_constraintTop_toBottomOf="@id/detailsBtn" />
 </LinearLayout>
